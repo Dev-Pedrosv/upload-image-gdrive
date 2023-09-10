@@ -1,4 +1,4 @@
-import { api } from "./src/api/api.js"
+const { api } = require('./src/api/api.js')
 
 /**
  * Params to upload images to GDrive
@@ -7,35 +7,27 @@ import { api } from "./src/api/api.js"
  * @param   {string} clientId - Client Id, get in json GDrive
  * @param   {string} privateKey - Private Key, get in json GDrive
  * @param   {string} clientEmail - Client Email, get in json GDrive
- * @param   {File[]} files - Array of File objects to upload
- * @returns {Promise<string[]>} - Array of image URLs or error messages
+ * @param   {File} file - File objects to upload
+ * @returns {Promise<string>} - Image URL or error message
  */
-export const uploadImages = async ({ folderId, clientId, privateKey, clientEmail, files }) => {
-  const formattedParams = {
-    folderId: folderId,
-    client_id: clientId,
-    private_key: privateKey,
-    client_email: clientEmail,
-  };
 
+const uploadImages = async ({ folderId, clientId, privateKey, clientEmail, file }) => {
   try {
-    const uploadPromises = files.map(async (file) => {
-      const formData = new FormData();
-      formData.append("file", file);
+    const formattedParams = {
+      folderId: folderId,
+      client_id: clientId,
+      private_key: privateKey,
+      client_email: clientEmail,
+      file
+    }
 
-      const { data } = await api.post('/upload-image', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
-        params: formattedParams,
-      });
-
-      return data;
-    });
-
-    const imageUrls = await Promise.all(uploadPromises);
-    return imageUrls;
+    const { data } = await api.post('/upload-image', formattedParams);
+    return data;
   } catch (err) {
     return err;
   }
 };
+
+module.exports = {
+  uploadImages
+}

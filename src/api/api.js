@@ -1,5 +1,9 @@
-import axios from 'axios';
+const axios = require('axios');
 
-export const api = axios.create({
-  baseURL: 'https://service-upload.vercel.app/'
+const api = axios.create({
+  baseURL: 'http://service-upload.vercel.app/'
 });
+
+module.exports = {
+  api
+}

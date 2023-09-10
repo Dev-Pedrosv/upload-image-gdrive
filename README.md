@@ -9,12 +9,12 @@ Create the folder in gdrive
 
 add the email client as editor
 
-You'll need {
-  FolderId - Id folder create in Gdrive 
-  client_id: Client Id created by Gdrive API,
-  private_key: Private Key created by Gdrive API,
-  client_email: Client Email created by Gdrive API,
-}
+You'll need :
+- FolderId - Id folder create in Gdrive 
+- client_id: Client Id created by Gdrive API,
+- private_key: Private Key created by Gdrive API,
+- client_email: Client Email created by Gdrive API,
+
 
 How use ? 
 
@@ -22,7 +22,9 @@ How use ?
   npm i upload-image-gdrive
 ```
 
-```js import { uploadImages } from "upload-image-gdrive";
+```js 
+
+  const { uploadImages } = require("upload-image-gdrive")
 
 /**
   * @param   {File[]} files - Array of File objects to upload
