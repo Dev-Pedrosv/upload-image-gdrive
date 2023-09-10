@@ -2,14 +2,19 @@
   "name": "upload-image-gdrive",
   "version": "1.0.2",
   "description": "Service to upload images in GDrive folders",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --declaration"
   },
   "keywords": ["upload-image", "gdrive", "upload-image-google", "upload", "image", "upload-gdrive"],
   "author": "pedrosilvadev",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.3"
   }
 }

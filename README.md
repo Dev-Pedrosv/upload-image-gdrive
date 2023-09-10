@@ -24,7 +24,7 @@ How use ?
 
 ```js 
 
-  const { uploadImages } = require("upload-image-gdrive")
+  import uploadImage from "upload-image-gdrive"
 
 /**
   * @param   {File[]} files - Array of File objects to upload
