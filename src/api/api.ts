@@ -1,5 +1,8 @@
 import axios from 'axios'
 
 export const api = axios.create({
-  baseURL: 'https://service-upload.vercel.app/'
+  baseURL: 'https://service-upload.vercel.app/',
+  headers: { 
+    Accept: "*/*" 
+  }
 });

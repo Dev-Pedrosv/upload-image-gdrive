@@ -13,14 +13,13 @@ exports.uploadImage = void 0;
 const api_1 = require("./api/api");
 const uploadImage = ({ folderId, clientId, privateKey, clientEmail, file }) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const formattedParams = {
-            folderId: folderId,
-            client_id: clientId,
-            private_key: privateKey,
-            client_email: clientEmail,
-            file
-        };
-        const { data } = yield api_1.api.post('/upload-image', formattedParams);
+        const bodyContent = new FormData();
+        bodyContent.append('folderId', folderId);
+        bodyContent.append('client_id', clientId);
+        bodyContent.append('private_key', privateKey);
+        bodyContent.append('client_email', clientEmail);
+        bodyContent.append('file', file);
+        const { data } = yield api_1.api.post("/upload-image", bodyContent);
         return data;
     }
     catch (err) {

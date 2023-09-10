@@ -6,6 +6,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.api = void 0;
 const axios_1 = __importDefault(require("axios"));
 exports.api = axios_1.default.create({
-    baseURL: 'https://service-upload.vercel.app/'
+    baseURL: 'https://service-upload.vercel.app/',
+    headers: {
+        Accept: "*/*"
+    }
 });
 //# sourceMappingURL=api.js.map
