@@ -1,4 +1,4 @@
-import { api } from "./api/api.js"
+import { api } from "./src/api/api.js"
 
 /**
  * Params to upload images to GDrive
