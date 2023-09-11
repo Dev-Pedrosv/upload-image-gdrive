@@ -1,6 +1,6 @@
 {
   "name": "upload-image-gdrive",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "Service to upload images in GDrive folders",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
