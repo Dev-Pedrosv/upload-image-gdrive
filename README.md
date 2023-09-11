@@ -45,7 +45,7 @@ How use ?
 
   import uploadImage from "upload-image-gdrive"
   
-  const exampleFunction = async (event: Event<HTMLInputElement>]) => {
+  const exampleFunction = async (event: Event<HTMLInputElement>) => {
     const params = {
       folderId: process.env.NEXT_PUBLIC_FOLDER_ID,
       clientId: process.env.NEXT_PUBLIC_CLIENT_ID,
