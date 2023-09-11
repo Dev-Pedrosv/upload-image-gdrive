@@ -16,6 +16,10 @@ You can see all steps here: https://support.google.com/a/answer/7378726
  
 ![image](https://github.com/Dev-Pedrosv/upload-image-gdrive/assets/82785683/09d02977-56bb-4a39-b360-f6352e72b828)
 
+## Share your folder 
+![image](https://github.com/Dev-Pedrosv/upload-image-gdrive/assets/82785683/0b3a801d-80aa-4756-8db8-a3d05e53d2b7)
+
+
 ## Add the email client as editor
 
 ![image](https://github.com/Dev-Pedrosv/upload-image-gdrive/assets/82785683/30f0b8b8-11fe-4df9-ad01-b4ae0f54d520)
